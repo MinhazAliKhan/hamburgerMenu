@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "urbanist";
+}
+p,
+li,
+a,
+button {
+  font-size: 1.7rem;
+  letter-spacing: 0.1rem;
+}
+li {
+  list-style: none;
+}
+a {
+  color: #000;
+  text-decoration: none;
+  &:hover {
+    color: #2e86c1;
+    text-decoration: underline;
+  }
+}
+button {
+  cursor: pointer;
+}
+header {
+  height: 10rem;
+  background-color: rgb(247, 247, 152);
+  width: 100%;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+}
+.container {
+  max-width: 132rem;
+  height: 10rem;
+  margin: auto;
+}
+.grid {
+  display: grid;
+}
+.navbar-grid {
+  grid-template-columns: 0.5fr 1fr;
+  align-items: center;
+  height: 10rem;
+  padding: 0 3.2rem;
+}
+nav ul {
+  display: flex;
+  justify-content: end;
+  gap: 3.2rem;
+}
+.logo {
+  color: rgb(215, 32, 32);
+  font-size: 3rem;
+  text-transform: capitalize;
+}
+.hero-section {
+  height: 60vh;
+}
+.hero-section .container {
+  background-color: #fff;
+  padding: 3.2rem;
+}
+.grid-two-col {
+  grid-template-columns: 1fr 1fr;
+}
+.hero-grid {
+  gap: 2rem;
+  align-items: center;
+}
+.hero-heading {
+  font-family: inherit;
+  font-size: clamp(2.648rem, 6vw, 4.241rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -1px;
+}
+.hero-pera {
+  margin: 3.2rem 0;
+}
+button {
+  display: inline-block;
+  font-family: inherit;
+  /* font-size: 0.95rem; */
+  font-weight: 500;
+  line-height: 1.5;
+  padding: 0.6rem 2.4rem;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  user-select: none;
+  outline: none;
+  border: none;
+  border-radius: 0.25rem;
+  text-transform: unset;
+  transition: all 0.3s ease-in-out;
+  background: rgb(215, 32, 32);
+  color: #fff;
+}
+.banner-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .banner-image {
+  width: 100%;
+}
+.banner-img {
+  display: block;
+  max-width: 40rem;
+  height: auto;
+  justify-self: center;
+}
+img {
+  border-radius: 0.5rem;
+  box-shadow: rgba(216, 221, 176, 0.1) 0px 10px 10px -10px;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+@media screen and (max-width: 990px) {
+  .hero-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .banner-inner {
+    order: 1;
+  }
+
+  .container .banner-image {
+    width: 80%;
+    order: 0;
+  }
+}
+.ham-menu {
+  display: none;
+}
+@media screen and (max-width: 998px) {
+  .menu-web {
+    display: none;
+  }
+  .ham-menu {
+    display: inline-block;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .menu-mobile {
+    position: absolute;
+    top: 10rem;
+    left: 0;
+    background-color: rgb(246, 233, 230);
+    width: 100%;
+    box-shadow: rgb(236, 239, 197) 0px 14px 28px;
+  }
+  .menu-mobile ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu-mobile ul li:first-child {
+    margin-top: 1rem;
+  }
+  .menu-mobile ul li:last-child {
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 668px) {
+  .logo {
+    font-size: 150%;
+  }
+}
